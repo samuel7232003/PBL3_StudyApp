@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: #f5f5f5 !important;
+    height: 100%;
+    position: relative;
+}
+
+#main{
+    height: 100%;
+}
+
+#header .header-noti{
+    margin: 5px 0 !important;
+}
+
+#content {
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+
+#content .content-left{
+    width: 260px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.content-left a{
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    padding: 20px 10px;
+    margin-bottom: 5px;
+    transition: 0.25s;
+    text-decoration: none;
+    color: black;
+}
+
+.content-left .r5{
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    background-color: #f5f5f5;
+}
+
+.content-left a p{
+    display: inline;
+    font-weight: bold;
+}
+
+.content-left a i{
+    float: right;
+    padding-right: 5px;
+}
+
+.content-left a:hover{
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    background-color: #f5f5f5;
+}
+
+#content .content-main{
+    width: calc(100% - 260px);
+    display: inline;
+    padding: 40px;
+}
+
+#content .title-main{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+#content .content-main .content-main-search{
+    background-color: #fff;
+    height: 35px;
+    width: 300px;
+    border-radius: 50px;
+    margin: 20px 0;
+}
+
+#content .content-main .content-main-search i{
+    padding: 5px;
+    margin: 6px;
+    color: #8a8a8a;
+}
+
+#content .content-main .content-main-search input{
+    border: none;
+    outline: none;
+}
+
+#content .content-main .content-main-item{
+    display: inline-block;
+    height: auto;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    margin: 10px 5px;
+
+}
+
+#content .content-main .content-main-list{
+    position: relative;
+    height: calc(100% - 52px);
+}
+
+#content .content-main .content-main-list p{
+    margin: 0;
+}
+
+#content .content-main .content-main-list form{
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+#content .content-main .content-main-list .profile{
+    width: 100%;
+    position: relative;
+}
+
+#content .content-main .content-main-list .profile .background{
+    height: 100px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#content .content-main .content-main-list .profile .avatar{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-top: -30px;
+    margin-left: 20px;
+    object-fit: cover;
+}
+
+#content .content-main .content-main-list .profile .name{
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 8px;
+    font-size: 18px;
+    position: absolute;
+    bottom: -10px;
+    left: 90px;
+}
+
+#content .content-main .content-main-list .content{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+#content .content-main .content-main-list .content .item{
+    margin: 0 15px;
+}
+
+#content .content-main .content-main-list .content .item .date{
+    font-weight: bold;
+    font-size: 13px;
+    color: #8A8a8a;
+    margin-bottom: 5px;
+    display: inline;
+}
+
+#content .content-main .content-main-list .content .item .time{
+    background-color: #75ba80;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+#content .content-main .content-main-list .content .item .address{
+    font-size: 15px;
+    font-style: italic;
+}
+
+#content .content-main .content-main-list .content .item i{
+    margin: 5px;
+}
+
+#content .content-main .content-main-list .see-more{
+    cursor:pointer;
+    width: 100px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #545454;
+    font-weight:bold;
+    margin-left: calc(50% - 50px);
+    margin-bottom: 5px;
+}
+
+#content .content-main .content-main-list a{
+    text-decoration: none;
+    color: #8a8a8a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+#content .content-add{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 3px 3px #8A8a8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #0fb8de;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#content .content-add:hover{
+    background: #0fb8de;
+    color: white;
+    transform: scale(1.2);
+}
+
+#formPaging{
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 350px);
+    display: flex;
+    justify-content: center;
+}
+
+#formPaging a{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#formPaging .page-item.active .page-link{
+    z-index: 0;
+}
+
+.booking-apm{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.panel{
+    position: fixed;
+    background: rgba(0,0,0, 70%);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.booking-apm .content{
+    position: relative;
+    background-color: #fff;
+    height: auto;
+    width: 800px;
+    margin-left: calc(50% - 400px);
+    margin-top: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s linear;
+    transform: scale(1);
+}
+
+.booking-apm .content .background{
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.booking-apm .content .ava{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: -70px;
+    object-fit: cover;
+}
+
+.booking-apm .name{
+    margin: 20px 0;
+}
+
+.booking-apm .infor-apm .flex{
+    text-align: left;
+    padding: 0 50px;
+    display: flex;
+}
+
+.booking-apm .infor-apm .title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.booking-apm .infor-apm .infor{
+    width: 360px;
+    border-right: solid 3px #8A8a8a;
+}
+
+.booking-apm .infor-apm .list-members{
+    padding: 0 20px;
+}
+
+.booking-apm .infor-apm .list-members .title.inline,
+.booking-apm .infor-apm .list-members .number{
+    display: inline-block;
+}
+
+.booking-apm .infor-apm .date{
+    font-weight: bold;
+    color: #373737;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.booking-apm i{
+    width: 50px;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.booking-apm .time,
+.booking-apm .type-location{
+    background-color: #75ba80;
+    display: inline;
+    padding: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.booking-apm .type-location{
+    background-color: #d35800;
+    color: #fff;
+    display: inline-block;
+}
+
+.booking-apm .list.inline{
+    display: inline-block;
+}
+
+.booking-apm .address,
+.booking-apm .number{
+    display: inline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.booking-apm .infor-apm .list-members .list{
+    height: 200px;
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+}
+
+.booking-apm .infor-apm .list-members .list .item{
+    margin-bottom: 20px;
+}
+
+.booking-apm .infor-apm .list-members .list img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.booking-apm .exit{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 26px;
+    width: 35px;
+    border-radius: 7px;
+    font-weight: bold;
+    background: #e84655;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.booking-apm .exit:hover{
+    transform: scale(1.2);
+}
+
+.page-item.active .page-link{
+    z-index: 0 !important;
+}
+
+.booking-apm .submit{
+    width: 150px;
+    margin: 30px 0;
+    padding: 10px;
+    border: none;
+    background-color: #e84655;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    transition: 0.3s;
+}
+
+.booking-apm .submit:hover{
+    transform: scale(1.2);
+}
+
+.hide{
+    display: none;
+}

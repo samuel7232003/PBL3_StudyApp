@@ -1,0 +1,662 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: #f5f5f5 !important;
+    height: 100%;
+    position: relative;
+}
+
+#main{
+    height: 100%;
+}
+
+#header .header-noti{
+    margin: 0 !important;
+}
+
+#content {
+    height: calc(100% - 45px);
+    display: flex;
+    width: 100%;
+}
+
+#content .content-left{
+    width: 260px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.content-left a{
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    padding: 20px 10px;
+    margin-bottom: 5px;
+    transition: 0.25s;
+    text-decoration: none;
+    color: black;
+}
+
+.content-left .r1{
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    background-color: #f5f5f5;
+}
+
+.content-left a p{
+    display: inline;
+    font-weight: bold;
+}
+
+.content-left a i{
+    float: right;
+    padding-right: 5px;
+}
+
+.content-left a:hover{
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    background-color: #f5f5f5;
+}
+
+#content .content-main{
+    width: calc(100% - 260px);
+    display: inline;
+    padding: 40px;
+    position: relative;
+}
+
+#content .title-main{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#content .content-main .content-main-search{
+    background-color: #fff;
+    height: 35px;
+    width: 300px;
+    border-radius: 50px;
+    margin: 20px 0;
+}
+
+#content .content-main .content-main-search i{
+    padding: 5px;
+    margin: 6px;
+    color: #8a8a8a;
+}
+
+#content .content-main .content-main-search input{
+    border: none;
+    outline: none;
+}
+
+#content .content-list-user{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#content .content-list-user .item{
+    background-color: #d9d9d9;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#content .content-list-user .item p{
+    margin: 0;
+}
+
+#content .content-list-user .item:hover{
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    background-color: #c0c0c0;
+}
+
+#content .content-list-user .item .ava-name{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#content .content-list-user .item img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+#content .content-list-user .item .ava-name,
+#content .content-list-user .item .birth,
+#content .content-list-user .item .sex{
+    width: 360px;
+    display: flex;
+    align-items: center;
+}
+
+#content .content-list-user .item .sex{
+    width: 230px;
+}
+
+#content .content-list-user .item .title{
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+#content .content-list-user .item .birth .date{
+    border: none;
+    background-color: #d9d9d900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #000;
+}
+
+#content .content-list-user .item .buttons{
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 220px - 220px - 150px);
+    padding-right: 20px;
+
+}
+
+#content .content-list-user .item .button{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 7px;
+    border-radius: 5px;
+    border: none;
+    align-self:flex-end;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#content .content-list-user .item .button:hover{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#content .content-list-user .item .button i{
+    margin-right: 5px;
+    color: #fff;
+}
+
+#content .content-list-user .item .buttons .remove{
+    background-color: #e84655;
+}
+
+#content .content-list-user .item .buttons .lock{
+    background-color: #e8b236;
+}
+
+#content .content-list-user .item .buttons .unlock{
+    background: #4CAF50;
+}
+
+.item-lock{
+    opacity: 0.5;
+}
+
+#formPaging{
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 80px);
+    display: flex;
+    justify-content: center;
+}
+
+#formPaging a{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#formPaging .page-item.active .page-link{
+    z-index: 0;
+}
+
+.panel{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 80%);
+    top:0;
+}
+
+.detail-div p,
+.add-new-user p{
+    margin: 0;
+}
+
+.detail-div{
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.detail-div .detail-div-main{
+    position: absolute;
+    top: 0;
+    background: white;
+    width: 800px;
+    min-width: 800px;
+    border-radius: 10px;
+    margin: 30px 0;
+    padding: 30px;
+}
+
+.detail-div .detail-div-main .title-main{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.detail-div .detail-div-main .ava{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-left: calc(50% - 150px);
+    margin-top: -150px;
+    border: 1px solid #c4c4c4;
+    object-fit: cover;
+}
+
+.detail-div .detail-div-main .background{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 300px;
+}
+
+.detail-div .detail-div-main .name{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.detail-div .detail-div-main .role{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.detail-div .detail-div-main .role .title{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.detail-div .detail-div-main .role .list-role{
+    font-style: italic;
+    margin: 0 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.detail-div .detail-div-main .infor-user .title-edit{
+    display: block;
+    width: 100%;
+    margin-left: 45px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.detail-div .detail-div-main .infor-user .first-name{
+    margin-left: 150px;
+}
+
+.detail-div .detail-div-main .infor-user .first-name,
+.detail-div .detail-div-main .infor-user .last-name{
+    padding: 10px 5px;
+    font-weight: bold;
+    border: solid 1px #8A8a8a;
+    border-radius: 5px;
+    outline: none;
+}
+
+.detail-div .detail-div-main .infor-user .list{
+    display: flex;
+    margin: 20px 0;
+    margin-left: 100px;
+}
+
+.detail-div .detail-div-main .infor-user .list i{
+    width: 30px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.detail-div .detail-div-main .infor-user .list .content{
+    font-weight: bold;
+    width: 150px;
+}
+
+.detail-div .detail-div-main .infor-user .list .date{
+    background-color: #fff;
+    border: none;
+    color: #000;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.detail-div .detail-div-main .infor-user .chance-password input{
+    width: 400px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.detail-div .detail-div-main .infor-user .submit{
+    margin-left: calc(100% - 200px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: gray;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.detail-div .detail-div-main .infor-user .submit:hover{
+    opacity: 1;
+}
+
+.detail-div .detail-div-main .infor-user .list .list-school,
+.detail-div .detail-div-main .infor-user .list .list-sex{
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    color: #000;
+    width: 500px;
+}
+
+.detail-div .detail-div-main .infor-user .exit{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 26px;
+    width: 35px;
+    border-radius: 7px;
+    font-weight: bold;
+    background: #e84655;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.detail-div .detail-div-main .infor-user .exit:hover{
+    transform: scale(1.2);
+}
+
+.confirm-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-div .confirm-lock,
+.confirm-div .confirm-delete{
+    height: 160px;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    text-align: center;
+    position: fixed;
+    top: calc(50% - 80px);
+}
+
+.confirm-div .confirm-lock .title,
+.confirm-div .confirm-delete .title{
+    line-height: 70px;
+    font-weight: bold;
+}
+
+.confirm-div .confirm-lock .list,
+.confirm-div .confirm-delete .list{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-div .confirm-lock .list button,
+.confirm-div .confirm-delete .list button{
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.25s;
+}
+
+.confirm-div .confirm-lock .list button:hover,
+.confirm-div .confirm-delete .list button:hover{
+    width: 120px;
+    box-shadow:  3px 3px 5px 0px #aaaaaa;
+}
+
+.confirm-div .confirm-lock .list .lock,
+.confirm-div .confirm-delete .list .remove{
+    background-color: #e33f3f;
+}
+
+.confirm-div .confirm-lock .list .exit,
+.confirm-div .confirm-delete .list .exit{
+    background-color: #39b41d;
+}
+
+.hide{
+    display: none !important;
+}
+
+#content .content-add{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 3px 3px #8A8a8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #0fb8de;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#content .content-add:hover{
+    background: #0fb8de;
+    color: white;
+    transform: scale(1.2);
+}
+
+.add-new-user{
+    display: flex;
+    justify-content: center;
+}
+
+.add-new-user .add-new-user-main{
+    position: fixed;
+    background: white;
+    width: 800px;
+    min-width: 800px;
+    border-radius: 10px;
+    padding: 30px;
+    top: calc(50% - 250px);
+}
+
+.add-new-user .add-new-user-main .title-main{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.add-new-user .add-new-user-main .content-main{
+    display: flex;
+    width: 100%;
+}
+
+.add-new-user-main .account,
+.add-new-user-main .infor{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+.add-new-user-main .title-account,
+.add-new-user-main .title-infor{
+    display: block;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.add-new-user-main .account input{
+    height: 40px;
+    width: 90%;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 3px 0 #8A8a8a;
+}
+
+.add-new-user-main .infor .list{
+    display: flex;
+    margin: 20px 0;
+}
+
+.add-new-user-main .infor .first-name,
+.add-new-user-main .infor .last-name{
+    padding: 5px;
+    font-weight: bold;
+    border: solid 1px #8A8a8a;
+    border-radius: 5px;
+    outline: none;
+}
+
+.add-new-user-main .infor .last-name{
+    width: 100px;
+    margin-left: 10px;
+}
+
+.add-new-user-main .infor .list i{
+    width: 30px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.add-new-user-main .infor .list .content{
+    font-weight: bold;
+    width: 100px;
+}
+
+.add-new-user-main .infor .list .list-sex{
+    width: calc(100% - 150px);
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.add-new-user-main .infor .list-school{
+    margin-left: 10px;
+    border: 1px solid #8A8a8a;
+    font-size: 16px;
+    outline: none;
+    width: 90%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.add-new-user-main .infor .list .date{
+    background-color: #fff;
+    border: none;
+    color: #000;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-new-user .add-new-user-main .add{
+    margin-left: calc(50% - 60px);
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: #0fb8de;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 120px;
+    font-size: 18px;
+}
+
+.add-new-user .add-new-user-main .add:hover{
+    transform: scale(1.2);
+    box-shadow: 3px 3px 3px 0 #8A8a8a;
+}
+
+.add-new-user .add-new-user-main .exit{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 26px;
+    width: 35px;
+    border-radius: 7px;
+    font-weight: bold;
+    background: #e84655;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.add-new-user .add-new-user-main .exit:hover{
+    transform: scale(1.2);
+}

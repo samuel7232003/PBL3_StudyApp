@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: #f5f5f5;
+    height: 100%;
+}
+
+#main{
+    height: 100%;
+}
+
+#content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content .content-left{
+    background-color: #fff;
+    width: 260px;
+    padding-top: 10px;
+
+}
+
+#content .content-left .content-list-meeting{
+    padding: 10px;
+}
+
+#content .content-left .content-list-meeting .text{
+    font-weight: bold;
+    display: inline-block;
+}
+
+#content .content-left .content-list-meeting .all{
+    display: inline;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#content .content-left a{
+    text-decoration: none;
+    color: #8a8a8a;
+}
+
+#content .content-left .content-list-meeting .content-left-item{
+    height: 60px;
+    width: 220px;
+    background-color: #f0f7ff;
+    border-radius: 20px;
+    margin: 20px 5px 10px;
+}
+
+#content .content-left .content-left-item .time-date{
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px 0px 5px 30px ;
+    color: #8a8a8a;
+}
+
+#content .content-left .content-left-item .with-name{
+    display: flex;
+    align-items: start;
+}
+
+#content .content-left .content-left-item .with{
+    padding-left: 30px;
+    display: inline;
+}
+
+#content .content-left .content-left-item .name{
+    display: inline-block;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+#content .content-main{
+    display: inline;
+    width: 1000px;
+    height: auto;
+}
+
+#content .content-main .content-main-title{
+    display: block;
+    text-align: center;
+    margin: 30px;
+    font-size: 18px;
+}
+
+.create-appointment{
+    display: flex;
+    flex-flow: row;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    margin: 0 10px;
+    height: calc(100% - 152px);
+    min-width: 980px;
+    height: auto;
+}
+
+.create-appointment .your-calendar{
+    width: 50%;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.create-appointment .title{
+    font-style: italic;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.create-appointment .your-calendar .under-title{
+    padding: 10px;
+    box-shadow: 2px 3px 5px 0px #AAABAB;
+    border-radius: 10px;
+    height: calc(100% - 50px);
+}
+
+.create-appointment .profile .background{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.create-appointment .profile .avatar{
+    width: 130px;
+    height: 130px;
+    margin-left: calc(50% - 65px);
+    margin-top: -65px;
+    border-radius: 50%;
+}
+
+.create-appointment .your-calendar .content{
+    margin-top: 20px;
+}
+
+.create-appointment .your-calendar .content .item{
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding-top: 5px;
+    transition: 0.5s;
+}
+
+.create-appointment .your-calendar .content .item:hover{
+    border: solid 1px #d6d3da;
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+}
+
+.create-appointment .your-calendar .content .item .date{
+    color: #888888;
+    margin: 5px 10px;
+}
+
+.create-appointment .your-calendar .content .item .date-content{
+    display: flex;
+    flex-flow: row;
+}
+
+.create-appointment .your-calendar .content .item .time{
+    background-color: #e76f0d;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.create-appointment .your-calendar .content .item .fa-location-dot{
+    margin: auto 0px;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.create-appointment .your-calendar .content .item .address{
+    width: 170px;
+    margin: auto 0px;
+}
+
+.create-appointment .your-calendar .content .item .delete{
+    height: 33px;
+    width: 43px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin: auto 0;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.create-appointment .your-calendar .content .item .delete:hover{
+    background: #ff0000;
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    color: white;
+}
+
+.create-appointment .create-app{
+    padding: 0 10px;
+    width: 50%;
+
+}
+
+.create-app .content-calender{
+    background-color: #d9d9d94f;
+    border-radius: 5px;
+    margin: 12px;
+    padding: 0 13px;
+    position: relative;
+    padding-bottom: 15px;
+    font-size: 17px;
+}
+
+.create-app .content-calender table,
+.create-app .content-calender tbody{
+    width: 100%;
+}
+
+.create-app .calender-title p{
+    font-weight: bold;
+    padding: 10px 5px;
+}
+
+.create-app .content-calender .btn{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    color: #8A8a8a;
+    border: none;
+    outline: none;
+}
+
+.create-app .content-calender .btn:hover{
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+.create-app .content-calender .btn.left{
+    right: 110px;
+}
+
+.create-app .content-calender .month,
+.create-app .content-calender .year,
+.create-app .content-calender .icon{
+    position: absolute;
+    top: 10px;
+    color: #8A8a8a;
+    font-weight: bold;
+    right: 34px;
+    font-size: 20px;
+    transition: 0.25s;
+}
+
+.create-app .content-calender .icon{
+    right: 83px;
+}
+
+.create-app .content-calender .month{
+    right: 93px;
+}
+
+.create-app .content-calender td{
+    text-align: center;
+    font-size: 16px;
+}
+
+.create-app .content-calender td a{
+    display: flex;
+    height: 36px;
+    width: 36px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.create-app .content-calender .tr_1{
+    font-weight: bold;
+}
+
+.create-app .content-calender a{
+    position: relative;
+    z-index: 2;
+}
+
+.CN{
+    color: #ff0000;
+}
+
+.gray{
+    color: #8a8a8a;
+}
+
+.green a{
+    color: black;
+    border: solid 1px #4CAF50;
+    display: block;
+    border-radius: 50%;
+}
+
+.tr td:hover a{
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.day-chose a{
+    background: #4CAF50;
+    opacity: 0.8;
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.create-appointment .create-app .create-app-form .item{
+    display: inline-block;
+}
+
+.create-appointment .create-app .create-app-form .title{
+    display: inline-block;
+    font-style: normal;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.create-appointment .create-app .time-begin,
+.create-appointment .create-app .time-end
+{
+    display: inline;
+    height: 30px;
+    background: #8a8a8a;
+    border: none;
+    padding: 0 5px;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    margin-left: 10px;
+}
+
+.create-appointment .create-app .list,
+.create-appointment .create-app .detail-location
+{
+    height: 30px;
+    width: 160px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: solid 2px #8A8a8a;
+    margin-top: 5px;
+}
+
+.create-appointment .create-app .num{
+    width: auto;
+    margin-top: 5px;
+}
+
+.create-appointment .create-app .type{
+    width: auto;
+    background: #4CAF50;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: white;
+    padding-left: 5px;
+    margin-left: 10px;
+}
+
+.create-appointment .create-app .detail-location{
+    width: 326px;
+    padding: 0 5px;
+    margin-left: 85px;
+}
+
+.create-appointment .button{
+    width: 150px;
+    height: 42px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    background-color: #18C0e6;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-left: calc(100% - 160px);
+    transition: 0.25s;
+    margin-top: 30px;
+}
+
+.create-appointment .button:hover{
+    background: #0aa0c2;
+}
+
+#content .content-right {
+    height: 100%;
+    width: 259px;
+    padding-top: 10px;
+}
+
+#content .content-right .list-friends{
+    height: 50%;
+    width: 100%;
+}
+
+#content .content-right .list-friends .list-friends-title{
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+}
+
+#content .content-right .list-friends .list-friends-item{
+    height: 46px;
+    border-bottom: 1px #8a8a8a;
+    margin: 10px 0;
+}
+
+#content .content-right .list-friends .list-friends-item img{
+    float: left;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+#content .content-right .list-friends .list-friends-item .name{
+    display: inline;
+    padding-bottom: 10px;
+    line-height: 46px;
+    margin-left: 20px;
+}
+
+#content .content-right .list-friends .list-friends-item a{
+    text-decoration:  none;
+    color: #000;
+    font-weight: bold;
+}
+
+#content .content-right .list-friends .list-friends-item i{
+    float: right;
+    margin-right: 20px;
+    line-height: 46px;
+    color: #333333;
+}
+
+.time {
+    font-size: 12px;
+}
+
+@media only screen and (max-width:63.9375em){
+    #content .content-left{
+        display: none;}
+    #content .content-right{
+        display: none;}
+    #header .header-info-user{
+        display: none;}
+    #header .header-noti {
+        display: none;
+
+    }
+    #header .header-main{
+        width: 100%;
+    }
+
+}
+
+.error{
+    color: #e84655;
+    font-style: italic;
+
+}

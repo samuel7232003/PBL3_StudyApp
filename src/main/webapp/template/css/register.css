@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+
+#content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content .content-signin{
+    width: 30%;
+    min-width: 400px;
+    float: left;
+    display: inline;
+    height: auto;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 80px;
+    border-radius: 10px;
+    display: none;
+    /*margin-bottom: 50px;*/
+}
+
+#content .content-signin-title{
+    background-color: #16c0e8;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    margin: -50px auto 0;
+    font-size: 15px;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 3px 3px 5px 0px #9a9a9a;
+}
+
+#content .content-signin-title li{
+    list-style: none;
+    display: inline;
+    padding: 8px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#content .content-signin-title li:hover{
+    font-size: 35px;
+    transition-duration: 1s;
+}
+
+#content .content-signin-title h1{
+    margin-bottom: 10px;
+}
+
+#content form{
+    padding: 0 35px;
+}
+
+#content input {
+    font-size: 20px;
+    margin-top: 40px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border-width: 0px;
+    box-shadow: 1px 1px 4px 0px #9a9a9a;
+    transition: 0.25s;
+}
+
+#content form input:hover{
+    box-shadow: 3px 3px 6px 0px #9a9a9a;
+}
+
+#content form .signin-submit-button{
+    margin-top: 20px;
+    background-color: #16c0e8;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 3px 3px 5px 0px #9a9a9a;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#content .login-signup{
+    padding-top: 20px;
+    padding-left: 40px;
+    font-size: 18px;
+    color: #7b809a;
+    margin-bottom: 28px;
+}
+
+#content .login-signup button{
+    border: none;
+    background: transparent;
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#content .login-signup button:hover{
+    color: #128515;
+}
+
+#content .signin-submit-button:hover{
+    background-color: #0fb8de;
+}
+
+div#error_email, div#error_password, #msg{
+    color: #bb1b1b;
+    padding: 0px 5px;
+    font-style: italic;
+    margin-top: 10px;
+    transition: 0.25s;
+}
+#password{
+	margin-top: 30px;
+}
+
+#content .content-signin #firstName{
+    width: 40%;
+    margin-right: 3%;
+}
+
+#content .content-signin #lastName{
+    width: 55%;
+    display: inline;
+}
+
+#content .content-signin .sex{
+    box-shadow: none;
+    width: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}

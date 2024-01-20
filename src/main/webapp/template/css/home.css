@@ -1,0 +1,755 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+html body{
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+
+#main{
+    height: calc(100% - 46px);
+}
+
+#header li{
+    z-index: 0;
+}
+
+#content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#content .content-left{
+    background-color: #fff;
+    width: 260px;
+    height: 100%;
+}
+
+#content .content-left .content-calender{
+    background-color: #d9d9d94f;
+    border-radius: 5px;
+    margin: 30px 10px;
+    padding: 5px 5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#content .content-left .calender-title p{
+    font-weight: bold;
+    padding: 10px 5px;
+}
+
+#content .content-calender .btn{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: transparent;
+    font-size: 13px;
+    cursor: pointer;
+    color: #8A8a8a;
+}
+
+#content .content-calender .btn:hover{
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+#content .content-calender .btn.left{
+    right: 76px;
+}
+
+#content .content-calender .month,
+#content .content-calender .year,
+#content .content-calender .icon{
+    position: absolute;
+    top: 14px;
+    color: #8A8a8a;
+    font-weight: bold;
+    right: 26px;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+#content .content-calender .icon{
+    right: 64px;
+}
+
+#content .content-calender .month{
+    right: 72px;
+}
+
+#content .content-calender td{
+    width: 32px;
+    text-align: center;
+}
+
+#content .content-calender .tr_1{
+    font-weight: bold;
+}
+
+#content .content-calender a{
+    position: relative;
+    display: flex;
+    height: 31px;
+    width: 31px;
+    justify-content: center;
+    align-items: center;
+}
+
+.CN{
+    color: #ff0000;
+}
+
+.gray{
+    color: #8a8a8a;
+}
+
+
+.green a{
+    color: black;
+    border: solid 1px #4CAF50;
+    border-radius: 50%;
+}
+
+.tr td:hover a{
+    background: #4CAF50;
+    border-radius: 50%;
+}
+
+.day-chose{
+    background: #4CAF50;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.day-chose a{
+    color: white;
+}
+
+.tr td:hover a{
+    color: white;
+    font-weight: bold;
+}
+
+.black{
+    color: black;
+}
+
+#content .content-left .content-list-meeting{
+    padding: 10px;
+    height: calc(100% - 350px);
+
+}
+
+#content .content-left .content-list-meeting .content{
+    height: 90%;
+}
+
+.scroll-style{
+    overflow-y: scroll;
+}
+
+.scroll-style::-webkit-scrollbar{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.scroll-style::-webkit-scrollbar-thumb{
+    background-color: #d6d3da;
+}
+
+#content .content-left .content-list-meeting .text{
+    font-weight: bold;
+    display: inline-block;
+}
+
+#content .content-left .content-list-meeting .all{
+    display: inline;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#content .content-left a{
+    text-decoration: none;
+}
+
+#content .content-left .content-list-meeting .content-left-item{
+    height: 60px;
+    width: 220px;
+    background-color: #f0f7ff;
+    border-radius: 20px;
+    margin: 20px 5px 10px;
+}
+
+#content .content-left .content-left-item .time-date{
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px 0px 0px 30px;
+    color: #8a8a8a;
+    margin-bottom: 0;
+}
+
+#content .content-left .content-left-item .with-name{
+    display: flex;
+    align-items: start;
+}
+
+#content .content-left .content-left-item .with{
+    padding-left: 30px;
+    display: inline;
+}
+
+#content .content-left .content-left-item .name{
+    display: inline-block;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+#content .content-main{
+    display: inline;
+    width: 1000px;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+#content .content-main .content-main-title{
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+#content .content-main .content-main-search{
+    background-color: #fff;
+    height: 35px;
+    width: 300px;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+#content .content-main .content-main-search i{
+    padding: 5px;
+    margin: 6px;
+    color: #8a8a8a;
+}
+
+#content .content-main .content-main-search input{
+    border: none;
+}
+
+#content .content-main .content-main-item{
+    display: inline-block;
+    height: auto;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+    margin: 20px;
+    
+}
+
+#content .content-main .content-main-list{
+	position: relative;
+    height: calc(100% - 52px);
+}
+
+#content .content-main .content-main-list form{
+	position: absolute;
+    display: flex;
+    bottom: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+#content .content-main .content-main-list .profile{
+    width: 100%;
+    position: relative;
+}
+
+#content .content-main .content-main-list .profile .background{
+    height: 100px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#content .content-main .content-main-list .profile .avatar{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-top: -30px;
+    margin-left: 20px;
+    object-fit: cover;
+}
+
+#content .content-main .content-main-list .profile .name{
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 8px;
+    font-size: 18px;
+    position: absolute;
+    bottom: -10px;
+    left: 90px;
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+#content .content-main .content-main-list .content{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+#content .content-main .content-main-list .content .item{
+    margin: 0 15px;
+}
+
+#content .content-main .content-main-list .content .item .date{
+    font-weight: bold;
+    font-size: 13px;
+    color: #8A8a8a;
+    margin-bottom: 5px;
+    display: inline;
+}
+
+#content .content-main .content-main-list .content .item .time{
+    background-color: #75ba80;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+#content .content-main .content-main-list .content .item .address{
+    font-size: 15px;
+    font-style: italic;
+}
+
+#content .content-main .content-main-list .content .item i{
+    margin: 5px;
+}
+
+#content .content-main .content-main-list .see-more{
+    cursor:pointer;
+    width: 100px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #545454;
+    font-weight:bold;
+    margin-left: calc(50% - 50px);
+    margin-bottom: 5px;
+}
+
+#content .content-main .content-main-list a{
+    text-decoration: none;
+    color: #8a8a8a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+#content .content-right {
+    height: 100%;
+    width: 259px;
+    background-color: #f5f5f5;
+}
+
+#content .content-right .list-friends{
+    height: 40%;
+    width: 100%;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+#content .content-right .list-friends .list-friends-title{
+    font-weight: bold;
+    color: #000;
+}
+
+#content .content-right .list-friends .list-friends-item{
+    border-bottom: 1px #8a8a8a;
+    margin: 3px 0;
+}
+
+#content .content-right .list-friends .list-friends-item img{
+    float: left;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+#content .content-right .list-friends .list-friends-item .name{
+    display: inline-block;
+    padding-bottom: 10px;
+    line-height: 46px;
+    margin-left: 20px;
+    width: 150px;
+    height: 34px;
+    overflow: hidden;
+}
+
+#content .content-right .list-friends .list-friends-item a{
+    text-decoration:  none;
+    color: #000;
+    font-weight: bold;
+}
+
+#content .content-right .list-friends .list-friends-item i{
+    float: right;
+    margin-right: 20px;
+    line-height: 46px;
+    color: #333333;
+}
+
+#content .content-right .your-profile{
+    height: 60%;
+    width: 100%;
+    padding-top: 10px;
+}
+
+#content .content-right .your-profile .title{
+    font-weight: bold;
+}
+
+#content .content-right .your-profile-main{
+    height: 89%;
+    width: 98%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow:  3px 3px 5px 0px #aaaaaa;
+    position: relative;
+}
+
+#content .content-right .your-profile-main .profile{
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#content .content-right .your-profile-main .profile .background{
+    width: 100%;
+    border-radius: 8px;
+    height: 6rem;
+    object-fit: cover;
+}
+
+#content .content-right .your-profile-main .profile .avatar{
+    width: 80px;
+    height: 80px;
+    margin-top: -50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#content .content-right .your-profile-main .profile .name{
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#content .content-right .your-profile-main .item{
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#content .content-right .your-profile-main .item .date-time{
+    width: 100px;
+}
+
+#content .content-right .your-profile-main .item .date{
+    font-weight: bold;
+    font-size: 13px;
+    color: #8a8a8a;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    margin-right: 20px;
+}
+
+#content .content-right .your-profile-main .item .time{
+    background-color: #75ba80;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+#content .content-right .your-profile-main .item .address{
+    font-size: 14px;
+    font-style: italic;
+    width: calc(100% - 90px);
+    margin: 0;
+}
+
+#content .content-right .your-profile-main .item i{
+    margin-right: 10px;
+}
+
+#content .content-right .your-profile-main .line{
+    display: block;
+    height: 1px;
+    width: 90%;
+    background: #8A8a8a;
+    margin: 5px 10px;
+}
+
+#content .content-right .your-profile-main a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+#content .content-right .your-profile-main .add{
+    position: absolute;
+    background-color: #0fb8de;
+    font-size: 18px;
+    color: white;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    bottom: 5px;
+    right: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.booking-apm{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.panel{
+    position: fixed;
+    background: rgba(0,0,0, 70%);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.hide .panel{
+    display: none;
+}
+
+.hide .content{
+    transform: scale(0);
+}
+
+.booking-apm .content{
+    position: relative;
+    background-color: #fff;
+    height: auto;
+    width: 800px;
+    margin-left: calc(50% - 400px);
+    margin-top: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s linear;
+    transform: scale(1);
+}
+
+.booking-apm .content .background{
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.booking-apm .content .ava{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: -70px;
+    object-fit: cover;
+}
+
+.booking-apm .name{
+    margin: 20px 0;
+}
+
+.booking-apm .infor-apm .flex{
+    text-align: left;
+    padding: 0 50px;
+    display: flex;
+}
+
+.booking-apm .infor-apm .title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.booking-apm .infor-apm .infor{
+    width: 360px;
+    border-right: solid 3px #8A8a8a;
+}
+
+.booking-apm .infor-apm .list-members{
+    padding: 0 20px;
+}
+
+.booking-apm .infor-apm .list-members .title.inline,
+.booking-apm .infor-apm .list-members .number{
+    display: inline-block;
+}
+
+.booking-apm .infor-apm .date{
+    font-weight: bold;
+    color: #373737;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.booking-apm i{
+    width: 50px;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.booking-apm .time,
+.booking-apm .type-location{
+    background-color: #75ba80;
+    display: inline;
+    padding: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.booking-apm .type-location{
+    background-color: #d35800;
+    color: #fff;
+    display: inline-block;
+}
+
+.booking-apm .list.inline{
+    display: inline-block;
+}
+
+.booking-apm .address,
+.booking-apm .number{
+    display: inline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.booking-apm .infor-apm .list-members .list{
+    height: 200px;
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+}
+
+.booking-apm .infor-apm .list-members .list .item{
+    margin-bottom: 20px;
+}
+
+.booking-apm .infor-apm .list-members .list img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.booking-apm .exit{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 26px;
+    width: 35px;
+    border-radius: 7px;
+    font-weight: bold;
+    background: #e84655;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.booking-apm .exit:hover{
+    transform: scale(1.2);
+}
+
+.page-item.active .page-link{
+    z-index: 0 !important;
+}
+
+.booking-apm .submit{
+    width: 150px;
+    margin: 30px 0;
+    padding: 10px;
+    border: none;
+    background-color: #18C0e6;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 3px 3px 5px 0px #aaaaaa;
+}
+
+.booking-apm .submit:hover{
+    background-color: #0aa0c2;
+}
+@media only screen and  (max-width:63.9375em){
+	#content .content-left{
+	display: none;}
+	#content .content-right{
+	display: none;}
+	#header .header-info-user{
+	display: none;}
+    #header .header-noti {
+        display: none;
+        
+    }
+    #header .header-main{
+        width: 100%;
+    }
+    
+}
+
+.page-item.active .page-link{
+    background: #18c0e6;
+    color: white !important
+}
+
+.hide{
+    display: none;
+}
