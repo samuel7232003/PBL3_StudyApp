@@ -1,4 +1,5 @@
-#### Study App
+#### Finding Study-mate And Booking Date Website
+Website tìm kiếm bạn học và đặt lịch hẹn
 ---
 **Mô tả:**
 - Đồ án Công nghệ phần mềm kì 4.
@@ -41,3 +42,15 @@
 - Mở IDE InteliJ và mở dự án (hoặc EDI khác nếu khả dụng);
 - Khởi chạy (run) file index.html;
 - Đăng kí tài khoản mới để sử dụng.
+
+**Demo chương trình:**
+
+![image](https://github.com/samuel7232003/PBL3_StudyApp/assets/115569080/259c1f70-316e-4dff-a343-e6953b2e49cb)
+![image](https://github.com/samuel7232003/PBL3_StudyApp/assets/115569080/0094783f-d353-4bb9-97af-a002957cd13e)
+![image](https://github.com/samuel7232003/PBL3_StudyApp/assets/115569080/1700ee46-8a09-4c5b-99ad-1d4ce2913331)
+![image](https://github.com/samuel7232003/PBL3_StudyApp/assets/115569080/75b6245e-2325-4be1-b9b4-ac1ce2cda004)
+![image](https://github.com/samuel7232003/PBL3_StudyApp/assets/115569080/2a5c02ca-bd8d-470a-818d-b40779b5c670)
+![image](https://github.com/samuel7232003/PBL3_StudyApp/assets/115569080/3465fc08-4b0b-46a1-a749-ab36802a0c3c)
+
+
+
